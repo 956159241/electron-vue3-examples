@@ -123,3 +123,8 @@ ipcMain.handle('open-win', (event, arg) => {
     // childWindow.webContents.openDevTools({ mode: "undocked", activate: true })
   }
 })
+
+ipcMain.on("sendMessage", (event, args) => {
+  console.log("收到渲染进程的消息",  args);
+  win && win.webContents.send("receiveMessage", "我是主进程已收到消息" + args); // 响应渲染进程
+});
