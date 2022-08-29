@@ -1,19 +1,5 @@
 <template>
-  <div class="logo-box">
-    <button @click="sendMessage">渲染进程与主进程交互</button>
-    <img style="height:140px;" src="./assets/electron.png">
-    <span />
-    <img style="height:140px;" src="./assets/vite.svg">
-    <span />
-    <img style="height:140px;" src="./assets/vue.png">
-  </div>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <div class="static-public">
-    Place static files into the <code>/public</code> folder
-    <img style="width:77px;" :src="'./node.png'">
-
-    {{ res && res.statusText }}
-  </div>
+    <router-view />
 </template>
 
 <script setup lang="ts">
