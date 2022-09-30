@@ -36,6 +36,7 @@ async function createWindow() {
   win = new BrowserWindow({
     title: 'Main window',
     icon: join(ROOT_PATH.public, 'favicon.ico'),
+    autoHideMenuBar: true, // 隐藏菜单栏：https://newsn.net/say/electron-no-application-menu.html
     webPreferences: {
       preload,
       webSecurity: false,
